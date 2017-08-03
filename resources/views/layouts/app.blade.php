@@ -11,8 +11,8 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
-    <link href="/css/font-awesome.main.css" rel="Stylesheet" type="text/css">
-    <link href="/css/bootstrap.main.css" rel="Stylesheet" >
+    <link href="/css/font-awesome.min.css" rel="Stylesheet" type="text/css">
+    <link href="/css/bootstrap.min.css" rel="Stylesheet" >
     <link href="/css/app.css" rel="Stylesheet" >
 </head>
 <body>
@@ -79,8 +79,8 @@
     </div>
 
     <!-- Scripts -->
-    <script src="/js/jquery-3.1.0.main.js"></script>
-    <script src="/js/bootstrap.main.js"></script>
+    <script src="/js/app.js"></script>
+    <!-- <script src="/js/bootstrap.main.js"></script> -->
     @yield('script')
 </body>
 </html>
