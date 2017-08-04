@@ -14,6 +14,11 @@
     <link href="/css/font-awesome.min.css" rel="Stylesheet" type="text/css">
     <link href="/css/bootstrap.min.css" rel="Stylesheet" >
     <link href="/css/app.css" rel="Stylesheet" >
+    <link rel="stylesheet"  href="/css/jquery.dataTables.css">
+    <link rel="stylesheet"  href="/css/dataTables.bootstrap.css">
+    <script src="/js/jquery.dataTables.min.js"></script>
+    <script src="/js/dataTables.bootstrap.min.js"></script>
+    @yield('scripts')
 </head>
 <body>
     <div id="app">

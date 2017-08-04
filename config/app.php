@@ -180,7 +180,7 @@ return [
         // Add plus
         Collective\Html\HtmlServiceProvider::class,
         Laratrust\LaratrustServiceProvider::class,
-
+        Yajra\Datatables\DatatablesServiceProvider::Class,
     ],
 
     /*

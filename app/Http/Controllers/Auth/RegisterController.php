@@ -45,16 +45,14 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
-    protected function create(array $data)
+    protected function Validator(array $data)
     {
-        return User::create($data, [
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => bcryp($data['password'],
+        return Validator::make($data,[
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users',
+            'password' => 'required|string|min:6|confirmed',
         ]);
-            $memberRole=Role::where('name','member')->first();
-            $user->attachRole($memberRole);
-            return $user;
+            
     }
 
     /**
@@ -65,10 +63,13 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $user=User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+        $memberRole=Role::where('name','member')->first();
+            $user->attachRole($memberRole);
+            return $user;
     }
 }
