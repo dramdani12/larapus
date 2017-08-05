@@ -15,6 +15,8 @@
     <link href="/css/bootstrap.min.css" rel="Stylesheet" >
     <link rel="stylesheet"  href="/css/jquery.dataTables.css">
     <link rel="stylesheet"  href="/css/dataTables.bootstrap.css">
+    <link rel="stylesheet"  href="/css/selectize.css">
+    <link rel="stylesheet"  href="/css/selectize.bootstrap3.css">
    
     @yield('scripts')
 </head>
@@ -87,10 +89,12 @@
     </div>
 
     <!-- Scripts -->
+    
     <script src="/js/app.js"></script>
     <script src="/js/jquery.dataTables.min.js"></script>
     <script src="/js/dataTables.bootstrap.min.js"></script>
     <script src="/js/custom.js"></script>
+    <script src="/js/selectize.min.js"></script>
     @yield('scripts')
 </body>
 </html>

@@ -1,0 +1,24 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Http\Request;
+use Yajra\Datatables\Html\Builder;
+use Yajra\Datatables\Datatables;
+use App\Book;
+use Laratrust\LaratrustFacade as Laratrust;
+class GuestController extends Controller
+{
+    public function index(Request $request,Builder $htmlBuilder)
+    {
+    	if ($request->ajax()){
+            $books = Book::with(['author']);
+            return Datatables::of($books)
+            ->addColumn('action',function($book){
+                if(Laratrust::hasRole('admin')) return '';
+                return '<a class=" btn btn-xs btn-primary" href="#">Pinjam</a>';
+            })->make(true);
+                    
+    }
+}
